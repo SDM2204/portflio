@@ -15,5 +15,7 @@ export const Navbar = () => {
             <FaTwitterSquare />
         </div> 
     </nav>
-  )
-}
+  );
+};
+
+export default Navbar;
