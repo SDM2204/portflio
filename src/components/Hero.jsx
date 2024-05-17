@@ -15,7 +15,7 @@ const Hero = () => {
             </div>
             <div className='w-full lg:w-1/2 lg:p-8'>
               <div className='flex justify-center'>
-                <img src={profilePic} alt="Swapna Dip Mandal"/>
+                <img className='rounded-2xl' src={profilePic} alt="Swapna Dip Mandal"/>
               </div>
             </div>
         </div>
