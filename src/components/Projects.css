@@ -1,0 +1,50 @@
+/* Projects.css */
+
+/* Apply blur effect to all items except the hovered one */
+.project-item {
+    transition: filter 0.3s ease;
+  }
+  .project-item:hover ~ .project-item {
+    filter: blur(5px);
+  }
+  
+  /* Remove blur effect from the hovered project details */
+  .project-item:hover .project-details {
+    filter: none;
+  }
+  
+  /* Floating window that replaces the original image */
+  .floating-window {
+    position: absolute;
+    right: 30%;
+    top:0%;
+     /* Align the floating window to the left of the parent */
+    width: 535px; /* Match the width of the original image */
+    height: 250px; /* Match the height of the original image */
+    background: rgba(0, 0, 0, 0.90); /* Dark background for the window */
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5); /* Optional: add shadow for better appearance */
+    z-index: 1; /* Ensure it's above the backdrop */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: none; /* Hide the floating window initially */
+    overflow: hidden; /* Ensure content doesn't overflow */
+  }
+  
+  /* Display the floating window only on hover */
+  .project-item:hover .floating-window {
+    display: block;
+    transform: scale(1); /* Ensure it scales to full size */
+  }
+  
+  /* Ensure image scales to replace the original */
+  .project-image {
+    transition: transform 0.3s ease;
+  }
+  
+  .project-item:hover .project-image {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
